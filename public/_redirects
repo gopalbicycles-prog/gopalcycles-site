@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects
+# Trailing slash normalisation handled by Astro, but just in case:
+/gopaldesk    /gopaldesk/    301
+/contact      /contact/      301
+/rental-equipment-tracking    /rental-equipment-tracking/    301

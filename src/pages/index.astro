@@ -1,49 +1,260 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="GopalDesk is a free desktop app to run your own IoT server for rental equipment — e-bikes, scooters, golf carts. Connect devices over TCP, inspect messages, send commands. No cloud subscription required." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>GopalCycles | IoT Server &amp; Fleet Tools for Rental Operators</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <p class="eyebrow">GopalCycles • For Miles &amp; Memories</p>
+          <h1>Your own IoT server.<br/>No cloud subscription needed.</h1>
+          <p class="hero-text">
+            GopalDesk is a free desktop app that lets rental operators run an IoT server
+            directly on their laptop. Connect your devices, monitor live messages, and
+            send commands — all from your own machine. No third-party platform required.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="/download/">Download GopalDesk</a>
+            <a class="button secondary" href="/auth/signup.html">Create Free Account</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TWO OPTIONS STRIP -->
+      <section class="options-strip">
+        <div class="container options-grid">
+          <div class="option-card">
+            <div class="option-badge local">Local</div>
+            <h3>GopalDesk — Run on your laptop</h3>
+            <p>
+              Download the Electron desktop app, create a GopalCycles account, and your
+              laptop becomes an IoT server. Connect devices directly over TCP —
+              great for testing, field work, or operators who want full control.
+            </p>
+            <a class="option-link" href="/gopaldesk/">Learn about GopalDesk →</a>
+          </div>
+          <div class="option-card">
+            <div class="option-badge hosted">Hosted</div>
+            <h3>GopalWeb — Connect to our server</h3>
+            <p>
+              Don't want to manage your own server? GopalWeb is our hosted IoT platform
+              with custom protocol support for Omni, Segway-Ninebot, Okai, and more.
+              Same GopalCycles account — just connect and go.
+            </p>
+            <a class="option-link" href="http://webapp.gopalcycles.com/login" target="_blank" rel="noopener">Open GopalWeb →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="section">
+        <div class="container">
+          <h2>How GopalDesk works</h2>
+          <p class="section-sub">Three steps from download to live device data.</p>
+          <div class="steps-grid">
+            <div class="step">
+              <div class="step-num">1</div>
+              <h3>Download &amp; install</h3>
+              <p>Available for Windows, macOS (Apple Silicon &amp; Intel), and Linux. Run the installer and launch GopalDesk.</p>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <h3>Create your account</h3>
+              <p>Sign up for a free GopalCycles account. The same login works across GopalDesk and GopalWeb.</p>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <h3>Connect your device</h3>
+              <p>Point your IoT device at the IP and port shown in the app. It appears in the Live Connections table once connected.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section alt">
+        <div class="container">
+          <h2>Built for device operators, not just developers.</h2>
+          <div class="grid">
+            <article class="card">
+              <div class="icon">📡</div>
+              <h3>Live connection monitoring</h3>
+              <p>See every connected device — IMEI, protocol, status, and last event — in a live connections table that updates in real time.</p>
+            </article>
+            <article class="card">
+              <div class="icon">🔍</div>
+              <h3>Raw message inspection</h3>
+              <p>Open the Connection Inspector to see the raw TCP message stream from any device. Useful for debugging protocols and verifying device behaviour.</p>
+            </article>
+            <article class="card">
+              <div class="icon">⌨️</div>
+              <h3>Send commands directly</h3>
+              <p>Send ASCII or HEX commands to connected devices from the dashboard. Quick controls for lock, unlock, and get location are built in.</p>
+            </article>
+            <article class="card">
+              <div class="icon">🔐</div>
+              <h3>Secure account login</h3>
+              <p>Supabase-backed authentication. Create your account once and use it across GopalDesk and GopalWeb.</p>
+            </article>
+            <article class="card">
+              <div class="icon">📋</div>
+              <h3>Protocol support</h3>
+              <p>Generic TCP works with any device. GopalWeb adds custom protocols for Segway, Omni, Okai, and more — expanding continuously.</p>
+            </article>
+            <article class="card">
+              <div class="icon">💻</div>
+              <h3>No server required</h3>
+              <p>GopalDesk runs the IoT server locally on your laptop. No cloud account, no subscription, no per-device fees.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GOPALWEB CALLOUT -->
+      <section class="section">
+        <div class="container two-col">
+          <div>
+            <p class="eyebrow-sm">Hosted Option</p>
+            <h2>Need custom protocol support? Use GopalWeb.</h2>
+            <p>
+              GopalWeb is our hosted server — a customised IoT platform with built-in
+              protocol support for Omni, Segway-Ninebot, Okai, and other rental hardware.
+              It's the right choice for operators who want device connectivity without
+              running anything locally.
+            </p>
+            <p>
+              Same GopalCycles account. No extra signup.
+            </p>
+            <a class="button primary" href="http://webapp.gopalcycles.com/login" target="_blank" rel="noopener">Open GopalWeb</a>
+          </div>
+          <div class="panel">
+            <h3>GopalWeb supports</h3>
+            <ul>
+              <li>Segway-Ninebot scooters &amp; e-bikes</li>
+              <li>Omni IoT devices</li>
+              <li>Okai scooters</li>
+              <li>Generic TCP devices</li>
+              <li>More protocols added continuously</li>
+            </ul>
+            <hr/>
+            <p class="panel-note">GopalWeb is hosted — no install needed. <br/>GopalDesk runs locally on your machine.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="container cta-inner">
+          <h2>Ready to connect your first device?</h2>
+          <p>Create a free account, download GopalDesk, and your laptop is an IoT server in minutes.</p>
+          <div class="cta-actions">
+            <a class="button light" href="/auth/signup.html">Create Free Account</a>
+            <a class="button outline-light" href="/download/">Download GopalDesk</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </body>
 </html>
+
+<style is:global>
+  html, body { margin: 0; width: 100%; max-width: 100%; overflow-x: hidden; }
+  body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    color: #111827; background: #f8fafc; line-height: 1.6;
+  }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  h1 { font-size: 56px; line-height: 1.04; letter-spacing: -0.055em; margin: 0 0 22px; }
+  h2 { font-size: 34px; line-height: 1.15; letter-spacing: -0.03em; margin: 0 0 16px; }
+  h3 { margin-top: 0; }
+  .eyebrow { color: #2563eb; font-weight: 800; margin: 0 0 14px; font-size: 15px; }
+  .eyebrow-sm { color: #2563eb; font-weight: 700; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; margin: 0 0 10px; }
+  .section-sub { color: #64748b; margin: -8px 0 32px; font-size: 17px; }
+
+  /* HERO */
+  .hero {
+    min-height: calc(100vh - 74px);
+    display: flex; align-items: center;
+    padding: 80px 24px;
+    background:
+      radial-gradient(circle at center, rgba(255,255,255,0.72), rgba(255,255,255,0.92)),
+      url('/assets/dotted-world.webp') center center / cover no-repeat;
+  }
+  .hero-inner { text-align: center; max-width: 860px; margin: 0 auto; }
+  .hero-text { font-size: 20px; color: #334155; max-width: 720px; margin: 0 auto 32px; }
+  .actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+  .button { display: inline-block; padding: 13px 20px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 15px; }
+  .primary { background: #111827; color: white; box-shadow: 0 8px 20px rgba(17,24,39,0.16); }
+  .secondary { background: white; color: #111827; border: 1px solid #d1d5db; }
+  .light { background: white; color: #111827; }
+  .outline-light { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.4); }
+
+  /* OPTIONS STRIP */
+  .options-strip { background: #111827; padding: 52px 0; }
+  .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .option-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 28px; }
+  .option-card h3 { color: white; margin-bottom: 10px; font-size: 19px; }
+  .option-card p { color: #94a3b8; margin: 0 0 18px; font-size: 15px; }
+  .option-badge { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+  .option-badge.local { background: rgba(37,99,235,0.25); color: #93c5fd; }
+  .option-badge.hosted { background: rgba(16,185,129,0.2); color: #6ee7b7; }
+  .option-link { color: #e2e8f0; font-weight: 600; text-decoration: none; font-size: 14px; }
+  .option-link:hover { color: white; }
+
+  /* STEPS */
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 8px; }
+  .step { display: flex; flex-direction: column; }
+  .step-num { width: 40px; height: 40px; border-radius: 12px; background: #2563eb; color: white; font-weight: 900; font-size: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .step h3 { margin-bottom: 8px; }
+  .step p { color: #64748b; font-size: 15px; margin: 0; }
+
+  /* FEATURES */
+  .section { padding: 72px 0; }
+  .alt { background: rgba(255,255,255,0.85); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 32px; }
+  .card { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(15,23,42,0.05); }
+  .icon { font-size: 28px; margin-bottom: 12px; }
+
+  /* GOPALWEB TWO-COL */
+  .two-col { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
+  .panel { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(15,23,42,0.05); }
+  .panel ul { padding-left: 20px; margin: 0 0 16px; }
+  .panel li { margin-bottom: 10px; font-size: 15px; }
+  .panel hr { border: none; border-top: 1px solid #e5e7eb; margin: 16px 0; }
+  .panel-note { font-size: 13px; color: #64748b; margin: 0; }
+
+  /* CTA */
+  .cta-section { background: #0f172a; color: white; padding: 80px 0; text-align: center; }
+  .cta-section h2 { color: white; }
+  .cta-section p { color: #94a3b8; max-width: 540px; margin: 0 auto 32px; font-size: 17px; }
+  .cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    h1 { font-size: 40px; }
+    .options-grid, .steps-grid, .grid, .two-col { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 32px; }
+    .hero-text { font-size: 17px; }
+  }
+</style>

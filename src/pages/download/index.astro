@@ -1,0 +1,124 @@
+---
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Download GopalDesk — free desktop IoT server app for Windows, macOS, and Linux." />
+    <title>Download GopalDesk | GopalCycles</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow">Download</p>
+          <h1>Download GopalDesk</h1>
+          <p class="sub">Desktop IoT server app. Free. No subscription.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="download-grid">
+
+            <div class="download-card">
+              <div class="platform-icon">🪟</div>
+              <h3>Windows</h3>
+              <p class="platform-note">Tested on Windows 11</p>
+              <!-- Replace href with your actual release URL e.g. GitHub Releases -->
+              <a class="button primary" href="#" id="dl-windows">Download</a>
+            </div>
+
+            <div class="download-card">
+              <div class="platform-icon">🍎</div>
+              <h3>macOS ARM64</h3>
+              <p class="platform-note">Apple Silicon (M1 / M2 / M3)</p>
+              <a class="button primary" href="#" id="dl-mac-arm">Download</a>
+            </div>
+
+            <div class="download-card">
+              <div class="platform-icon">🍎</div>
+              <h3>macOS Intel</h3>
+              <p class="platform-note">Intel-based Macs</p>
+              <a class="button primary" href="#" id="dl-mac-intel">Download</a>
+            </div>
+
+            <div class="download-card">
+              <div class="platform-icon">🐧</div>
+              <h3>Linux</h3>
+              <p class="platform-note">Ubuntu 22.04 (.deb package)</p>
+              <a class="button primary" href="#" id="dl-linux">Download</a>
+            </div>
+
+          </div>
+
+          <div class="notice-box">
+            <strong>⚠️ Installation note</strong>
+            <p>
+              GopalDesk is currently not code-signed to keep operational costs low.
+              Your OS may display a warning such as "Unknown developer" or "Application cannot be verified."
+              This is expected — you will need to manually approve the app to install it.
+              Questions? Email <a href="mailto:abinash@gopalcycles.com">abinash@gopalcycles.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container steps-box">
+          <h2>After downloading</h2>
+          <ol class="after-steps">
+            <li>Run the installer and launch GopalDesk.</li>
+            <li>If you don't have an account, <a href="/auth/signup.html">create one here</a> — it's free.</li>
+            <li>Log in with your GopalCycles email and password.</li>
+            <li>Your server IP and port are displayed at the top of the dashboard.</li>
+            <li>Configure your IoT device to connect to that IP and Generic Port.</li>
+            <li>The device appears in the Live Connections table when it connects.</li>
+          </ol>
+          <p>Need help? Read the <a href="/docs/gopaldesk-manual/">User Manual</a> or <a href="/contact/">contact us</a>.</p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  html, body { margin: 0; width: 100%; overflow-x: hidden; }
+  body { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; color: #111827; background: #f8fafc; line-height: 1.6; }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  h1 { font-size: 48px; line-height: 1.08; letter-spacing: -0.05em; margin: 0 0 14px; }
+  h2 { font-size: 28px; line-height: 1.2; letter-spacing: -0.03em; margin: 0 0 20px; }
+  .eyebrow { color: #2563eb; font-weight: 800; margin: 0 0 12px; }
+  .hero { padding: 72px 0 56px; }
+  .hero .sub { font-size: 19px; color: #64748b; margin: 0; }
+  .section { padding: 64px 0; }
+  .alt { background: rgba(255,255,255,0.85); }
+  .button { display: inline-block; padding: 12px 20px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 15px; }
+  .primary { background: #111827; color: white; }
+  .download-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 32px; }
+  .download-card { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 28px 20px; text-align: center; box-shadow: 0 4px 16px rgba(15,23,42,0.05); display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .download-card h3 { margin: 0; font-size: 17px; }
+  .platform-icon { font-size: 36px; }
+  .platform-note { color: #64748b; font-size: 13px; margin: 0; }
+  .notice-box { background: #fefce8; border: 1px solid #fde68a; border-radius: 12px; padding: 20px 24px; }
+  .notice-box strong { display: block; margin-bottom: 6px; }
+  .notice-box p { margin: 0; font-size: 14px; color: #713f12; }
+  .notice-box a { color: #92400e; }
+  .steps-box { max-width: 680px; }
+  .after-steps { padding-left: 22px; }
+  .after-steps li { margin-bottom: 12px; font-size: 16px; }
+  .after-steps a { color: #2563eb; }
+  .steps-box p { color: #64748b; margin-top: 24px; }
+  .steps-box a { color: #2563eb; }
+  @media (max-width: 800px) { .download-grid { grid-template-columns: 1fr 1fr; } h1 { font-size: 34px; } }
+  @media (max-width: 500px) { .download-grid { grid-template-columns: 1fr; } }
+</style>

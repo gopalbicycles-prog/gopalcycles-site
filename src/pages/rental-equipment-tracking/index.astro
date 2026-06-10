@@ -1,0 +1,173 @@
+---
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GPS tracking for rental equipment — e-bikes, scooters, golf carts, and outdoor gear. Works with Omni, Segway-Ninebot, and Traccar. Free for small fleets."
+    />
+    <title>Rental Equipment GPS Tracking | GopalCycles</title>
+    <link rel="icon" type="image/png" href="/assets/Gopallogo.png" />
+  </head>
+  <body>
+    <Header />
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow">GPS Tracking</p>
+          <h1>Know where your rental equipment is. Always.</h1>
+          <p class="sub">
+            GopalCycles connects rental operators to live GPS tracking for e-bikes, scooters,
+            golf carts, and outdoor equipment — using self-hosted Traccar and GopalDesk.
+            No per-device cloud fees.
+          </p>
+          <a class="button primary" href="/contact/">Talk to Us About Your Fleet</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Track any connected rental equipment.</h2>
+          <p class="section-sub">GopalCycles works with hardware that transmits GPS over MQTT, TCP, or proprietary protocols.</p>
+          <div class="grid">
+            <article class="card">
+              <h3>E-bikes &amp; scooters</h3>
+              <p>Compatible with Omni, Segway-Ninebot, Navee, Okai, and Teltonika-equipped rental bikes and scooters.</p>
+            </article>
+            <article class="card">
+              <h3>Golf carts &amp; UTVs</h3>
+              <p>Attach a Teltonika or compatible tracker and stream location to your GopalDesk dashboard.</p>
+            </article>
+            <article class="card">
+              <h3>Outdoor &amp; adventure gear</h3>
+              <p>Kayaks, paddleboards, bikes — any asset with a trackable device can appear on your map.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container two-col">
+          <div>
+            <h2>Self-hosted Traccar, managed by GopalDesk.</h2>
+            <p>
+              Your GPS data flows into a Traccar instance hosted on your own infrastructure —
+              Oracle Cloud Free Tier, a VPS, or your preferred host. GopalDesk connects
+              securely to Traccar without exposing credentials to the browser.
+            </p>
+            <p>
+              You own the data. No third-party fleet platform between you and your equipment.
+            </p>
+            <a class="button primary" href="/gopaldesk/">Learn about GopalDesk</a>
+          </div>
+          <div class="panel">
+            <h3>How it works</h3>
+            <ol>
+              <li>Device transmits GPS via MQTT or TCP</li>
+              <li>Traccar receives and stores position data</li>
+              <li>Cloudflare Worker proxies requests securely</li>
+              <li>GopalDesk displays live map &amp; status</li>
+              <li>Operator takes action from dashboard</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Why operators choose GopalCycles for tracking.</h2>
+          <div class="reason-grid">
+            <div class="reason">
+              <span class="check">✓</span>
+              <div>
+                <strong>No per-device SaaS fees</strong>
+                <p>Self-hosted means you don't pay $X/device/month to a platform. Free for fleets under 25 devices.</p>
+              </div>
+            </div>
+            <div class="reason">
+              <span class="check">✓</span>
+              <div>
+                <strong>Works with your existing hardware</strong>
+                <p>Omni, Segway, Teltonika, and custom IoT nodes are all supported. Bring your own devices.</p>
+              </div>
+            </div>
+            <div class="reason">
+              <span class="check">✓</span>
+              <div>
+                <strong>Secure by design</strong>
+                <p>Traccar credentials never reach the browser. All requests proxy through a Cloudflare Worker.</p>
+              </div>
+            </div>
+            <div class="reason">
+              <span class="check">✓</span>
+              <div>
+                <strong>Manual refresh option</strong>
+                <p>Reduce mobile data consumption with on-demand map refresh — useful for field operators on limited plans.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container cta-inner">
+          <h2>Ready to add GPS tracking to your rental fleet?</h2>
+          <p>Book a free call and we'll help you figure out the right hardware and setup for your operation.</p>
+          <a class="button light" href="/contact/?utm_source=tracking&utm_medium=cta">Book Free Setup Call</a>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  html, body { margin: 0; width: 100%; overflow-x: hidden; }
+  body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    color: #111827; background: #f8fafc; line-height: 1.6;
+  }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  h1 { font-size: 52px; line-height: 1.06; letter-spacing: -0.05em; margin: 0 0 22px; }
+  h2 { font-size: 34px; line-height: 1.15; letter-spacing: -0.03em; margin: 0 0 18px; }
+  h3 { margin-top: 0; }
+  .eyebrow { color: #2563eb; font-weight: 800; margin: 0 0 14px; }
+  .hero { padding: 90px 0 80px; background: #f8fafc; }
+  .hero .sub { font-size: 20px; color: #334155; max-width: 700px; margin: 0 0 32px; }
+  .section-sub { color: #64748b; margin-bottom: 0; }
+  .button { display: inline-block; padding: 13px 20px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+  .primary { background: #111827; color: white; }
+  .light { background: white; color: #111827; }
+  .section { padding: 72px 0; }
+  .alt { background: rgba(255,255,255,0.85); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
+  .card, .panel { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(15,23,42,0.05); }
+  .two-col { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
+  .two-col ol { padding-left: 20px; }
+  .two-col li { margin-bottom: 10px; }
+  .reason-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+  .reason { display: flex; gap: 16px; align-items: flex-start; }
+  .check { font-size: 20px; color: #2563eb; font-weight: 900; flex-shrink: 0; margin-top: 2px; }
+  .reason strong { display: block; margin-bottom: 4px; font-size: 17px; }
+  .reason p { margin: 0; color: #64748b; font-size: 15px; }
+  .cta-section { background: #111827; color: white; padding: 72px 0; text-align: center; }
+  .cta-section h2 { color: white; }
+  .cta-section p { color: #94a3b8; max-width: 560px; margin: 0 auto 32px; }
+  @media (max-width: 900px) {
+    h1 { font-size: 38px; }
+    .grid, .reason-grid { grid-template-columns: 1fr 1fr; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    .grid, .reason-grid { grid-template-columns: 1fr; }
+  }
+</style>

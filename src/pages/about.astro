@@ -1,63 +1,97 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GopalCycles builds IoT-connected rental fleet tools for operators managing e-bikes, scooters, and outdoor equipment. Based in Toronto, Canada."
+    />
+    <title>About GopalCycles | Connected Rental Fleet Tools</title>
+    <link rel="icon" type="image/png" href="/assets/Gopallogo.png" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow">About</p>
+          <h1>Built by people who have connected rental fleets for a living.</h1>
+          <p class="sub">
+            GopalCycles comes from years of hands-on work in IoT, telematics, and connected
+            mobility — from Segway-Ninebot hardware in Beijing to scooter fleet platforms in North America.
+          </p>
+        </div>
+      </section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+      <section class="section">
+        <div class="container two-col">
+          <div>
+            <h2>Why GopalCycles exists</h2>
+            <p>
+              Most fleet management software is built for large operators with large budgets.
+              Small and mid-size rental operators — resorts, bike shares, campus fleets, tour operators —
+              get priced out of good tools or pushed into platforms with per-device fees that don't
+              make sense at their scale.
+            </p>
+            <p>
+              GopalCycles is different. GopalDesk is free for small fleets. You self-host the backend.
+              You own your data. We help you get set up and keep things running.
+            </p>
+            <p>
+              We are based in Toronto, Canada and work with rental operators across North America.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>What we bring</h3>
+            <ul>
+              <li>8+ years in IoT and telematics hardware</li>
+              <li>CAN bus, MQTT, Modbus, TCP/IP protocol work</li>
+              <li>Traccar self-hosting and configuration</li>
+              <li>Omni, Segway-Ninebot, Teltonika integrations</li>
+              <li>Cloudflare-first security architecture</li>
+              <li>Supabase auth and RLS for access control</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+      <section class="cta-section">
+        <div class="container" style="text-align:center">
+          <h2>Questions? We are easy to reach.</h2>
+          <p>Email us at <a href="mailto:hello@gopalcycles.com" style="color:#93c5fd">hello@gopalcycles.com</a> or book a setup call.</p>
+          <a class="button light" href="/contact/">Contact GopalCycles</a>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
-
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+<style is:global>
+  html, body { margin: 0; width: 100%; overflow-x: hidden; }
+  body { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; color: #111827; background: #f8fafc; line-height: 1.6; }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  h1 { font-size: 48px; line-height: 1.08; letter-spacing: -0.05em; margin: 0 0 18px; }
+  h2 { font-size: 32px; line-height: 1.15; letter-spacing: -0.03em; margin: 0 0 16px; }
+  h3 { margin-top: 0; }
+  .eyebrow { color: #2563eb; font-weight: 800; margin: 0 0 12px; }
+  .hero { padding: 80px 0 60px; }
+  .hero .sub { font-size: 19px; color: #334155; max-width: 700px; margin: 0; }
+  .section { padding: 72px 0; }
+  .two-col { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: start; }
+  .panel { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(15,23,42,0.05); }
+  .panel ul { padding-left: 20px; margin: 0; }
+  .panel li { margin-bottom: 10px; font-size: 15px; }
+  .cta-section { background: #111827; color: white; padding: 72px 0; }
+  .cta-section h2 { color: white; }
+  .cta-section p { color: #94a3b8; margin-bottom: 28px; }
+  .button { display: inline-block; padding: 13px 20px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+  .light { background: white; color: #111827; }
+  @media (max-width: 800px) { h1 { font-size: 34px; } .two-col { grid-template-columns: 1fr; } }
+</style>
